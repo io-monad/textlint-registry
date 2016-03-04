@@ -1,5 +1,7 @@
 # textlint-registry
 
+[![Build Status](https://travis-ci.org/io-monad/textlint-registry.svg?branch=master)](https://travis-ci.org/io-monad/textlint-registry)
+
 Visit [textlint official website](http://textlint.github.io/) for more information.
 
 This is an unofficial repository stores a collection of JSON Schema files representing the configuration definitions of [textlint rules](https://github.com/textlint/textlint/wiki/Collection-of-textlint-rule).
