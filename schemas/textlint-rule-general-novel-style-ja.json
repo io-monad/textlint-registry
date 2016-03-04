@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "chars_leading_paragraph": {
+        "title": "Characters allowed to lead a paragraph",
+        "type": "string",
+        "default": "　「『【〈《（(“\"‘'［[〔｛{＜<"
+      },
+      "no_punctuation_at_closing_quote": {
+        "title": "Disallow to put punctuations before closing quote",
+        "type": "boolean",
+        "default": true
+      },
+      "space_after_marks": {
+        "title": "Require a space after exclamation and question marks",
+        "type": "boolean",
+        "default": true
+      },
+      "even_number_ellipsises": {
+        "title": "Require even number of ellipsises",
+        "type": "boolean",
+        "default": true
+      },
+      "even_number_dashes": {
+        "title": "Require even number of dashes",
+        "type": "boolean",
+        "default": true
+      },
+      "appropriate_use_of_punctuation": {
+        "title": "Disallow consecutive punctuations",
+        "type": "boolean",
+        "default": true
+      },
+      "appropriate_use_of_interpunct": {
+        "title": "Disallow consecutive interpuncts",
+        "type": "boolean",
+        "default": true
+      },
+      "appropriate_use_of_choonpu": {
+        "title": "Disallow consecutive cho-onpu",
+        "type": "boolean",
+        "default": true
+      },
+      "appropriate_use_of_minus_sign": {
+        "title": "Require number after minus sign",
+        "type": "boolean",
+        "default": true
+      },
+      "max_arabic_numeral_digits": {
+        "title": "Maximum digits of Arabic numerals",
+        "oneOf": [{
+          "type": "integer"
+        }, {
+          "enum": [false]
+        }],
+        "default": 2
+      }
+    }
+  }]
+}

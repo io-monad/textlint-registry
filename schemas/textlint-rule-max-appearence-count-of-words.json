@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "limit": {
+        "title": "Maximum apprearance count of words",
+        "type": "integer",
+        "minimum": 1,
+        "default": 4
+      }
+    }
+  }]
+}

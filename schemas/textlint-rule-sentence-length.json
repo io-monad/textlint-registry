@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "max": {
+        "title": "Maximum length of a sentence",
+        "type": "integer",
+        "minimum": 1,
+        "default": 100
+      }
+    }
+  }]
+}

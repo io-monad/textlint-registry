@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "#": {
+        "title": "Maximum length of h1 title",
+        "type": "integer",
+        "default": 32
+      },
+      "##": {
+        "title": "Maximum length of h2 title",
+        "type": "integer"
+      },
+      "###": {
+        "title": "Maximum length of h3 title",
+        "type": "integer"
+      },
+      "####": {
+        "title": "Maximum length of h4 title",
+        "type": "integer"
+      },
+      "#####": {
+        "title": "Maximum length of h5 title",
+        "type": "integer"
+      },
+      "######": {
+        "title": "Maximum length of h6 title",
+        "type": "integer"
+      }
+    }
+  }]
+}

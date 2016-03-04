@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "min_interval": {
+        "title": "Minimum interval of joshi",
+        "type": "integer",
+        "minimum": 1,
+        "default": 1
+      },
+      "strict": {
+        "title": "Strict check",
+        "type": "boolean",
+        "default": false
+      }
+    }
+  }]
+}

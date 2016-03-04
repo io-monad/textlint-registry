@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "max-ten": {
+        "type": "object",
+        "properties": {
+          "max": {
+            "title": "Maximum number of \"、\" allowed in a sentence",
+            "type": "integer",
+            "minimum": 1,
+            "default": 3
+          },
+          "strict": {
+            "title": "Strict check",
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "no-double-negative-ja": {
+        "type": "boolean",
+        "default": false
+      },
+      "no-doubled-joshi": {
+        "type": "object",
+        "properties": {
+          "min_interval": {
+            "title": "Minimum interval of joshi",
+            "type": "integer",
+            "minimum": 1,
+            "default": 1
+          },
+          "strict": {
+            "title": "Strict check",
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "sentence-length": {
+        "type": "object",
+        "properties": {
+          "max": {
+            "title": "Maximum length of a sentence",
+            "type": "integer",
+            "minimum": 1,
+            "default": 100
+          }
+        }
+      },
+      "no-start-duplicated-conjunction": {
+        "type": "object",
+        "properties": {
+          "interval": {
+            "title": "Interval of sentences",
+            "type": "integer",
+            "minimum": 1,
+            "default": 2
+          }
+        }
+      },
+      "spellcheck-tech-word": {
+        "type": "boolean",
+        "default": false
+      },
+      "no-mix-dearu-desumasu": {
+        "type": "boolean",
+        "default": false
+      }
+    }
+  }]
+}

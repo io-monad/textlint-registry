@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "min_acronym_len": {
+        "title": "Minimum size for the acronym",
+        "type": "integer",
+        "minimum": 1,
+        "default": 3
+      },
+      "max_acronym_len": {
+        "title": "Maximum size for the acronym",
+        "type": "integer",
+        "minimum": 1,
+        "default": 5
+      },
+      "ignore_acronyms": {
+        "title": "Ignoring acronym list",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uniqueItems": true
+      }
+    }
+  }]
+}

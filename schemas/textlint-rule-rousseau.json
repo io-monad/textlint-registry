@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "showLevels": {
+        "title": "Level of importance",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "suggestion",
+            "warning",
+            "error"
+          ]
+        },
+        "uniqueItems": true
+      },
+      "ignoreTypes": {
+        "title": "Ignoring type of check",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "passive",
+            "lexical-illusion",
+            "so",
+            "adverbs",
+            "readibility",
+            "simplicity",
+            "weasel",
+            "sentence:start",
+            "sentence:end",
+            "sentence:uppercase"
+          ]
+        },
+        "uniqueItems": true
+      }
+    }
+  }]
+}
