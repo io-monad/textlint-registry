@@ -15,6 +15,10 @@
     "build": "gulp build",
     "prepublish": "gulp build"
   },
+  "files": [
+    "lib",
+    "schemas"
+  ],
   "keywords": [
     "textlint",
     "schema"
