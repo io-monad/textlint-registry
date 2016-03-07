@@ -30,11 +30,13 @@
     "espower-babel": "^4.0.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
     "gulp-jsbeautifier": "^2.0.2",
     "gulp-jsonlint": "^1.1.2",
     "gulp-load-plugins": "^1.2.0",
     "gulp-mocha": "^2.2.0",
     "gulp-sequence": "^0.4.5",
+    "gulp-wrap": "^0.11.0",
     "power-assert": "^1.2.0",
     "z-schema": "^3.16.1"
   }
