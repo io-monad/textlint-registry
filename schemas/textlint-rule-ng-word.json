@@ -10,6 +10,7 @@
         "title": "NG words",
         "type": "array",
         "items": {
+          "title": "NG word",
           "type": "string",
           "minLength": 1
         },

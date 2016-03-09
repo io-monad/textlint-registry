@@ -8,7 +8,15 @@
     "properties": {
       "chars_leading_paragraph": {
         "title": "Characters allowed to lead a paragraph",
-        "type": "string",
+        "oneOf": [{
+          "title": "Characters",
+          "type": "string",
+          "minLength": 1
+        }, {
+          "title": "Disable checking",
+          "type": "boolean",
+          "enum": [false]
+        }],
         "default": "　「『【〈《（(“\"‘'［[〔｛{＜<"
       },
       "no_punctuation_at_closing_quote": {
@@ -54,8 +62,12 @@
       "max_arabic_numeral_digits": {
         "title": "Maximum digits of Arabic numerals",
         "oneOf": [{
-          "type": "integer"
+          "title": "Max number",
+          "type": "integer",
+          "minimum": 1
         }, {
+          "title": "Disable checking",
+          "type": "boolean",
           "enum": [false]
         }],
         "default": 2

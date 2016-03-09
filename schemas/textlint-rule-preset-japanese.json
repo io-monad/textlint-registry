@@ -7,70 +7,97 @@
     "type": "object",
     "properties": {
       "max-ten": {
-        "type": "object",
-        "properties": {
-          "max": {
-            "title": "Maximum number of \"、\" allowed in a sentence",
-            "type": "integer",
-            "minimum": 1,
-            "default": 3
-          },
-          "strict": {
-            "title": "Strict check",
-            "type": "boolean",
-            "default": false
+        "oneOf": [{
+          "title": "Enable this rule with default options",
+          "type": "boolean"
+        }, {
+          "type": "object",
+          "properties": {
+            "max": {
+              "title": "Maximum number of \"、\" allowed in a sentence",
+              "type": "integer",
+              "minimum": 1,
+              "default": 3
+            },
+            "strict": {
+              "title": "Strict check",
+              "type": "boolean",
+              "default": false
+            }
           }
-        }
+        }],
+        "default": true
       },
       "no-double-negative-ja": {
+        "title": "Enable this rule",
         "type": "boolean",
-        "default": false
+        "default": true
       },
       "no-doubled-joshi": {
-        "type": "object",
-        "properties": {
-          "min_interval": {
-            "title": "Minimum interval of joshi",
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "strict": {
-            "title": "Strict check",
-            "type": "boolean",
-            "default": false
+        "oneOf": [{
+          "title": "Enable this rule with default options",
+          "type": "boolean"
+        }, {
+          "type": "object",
+          "properties": {
+            "min_interval": {
+              "title": "Minimum interval of joshi",
+              "type": "integer",
+              "minimum": 1,
+              "default": 1
+            },
+            "strict": {
+              "title": "Strict check",
+              "type": "boolean",
+              "default": false
+            }
           }
-        }
+        }],
+        "default": true
       },
       "sentence-length": {
-        "type": "object",
-        "properties": {
-          "max": {
-            "title": "Maximum length of a sentence",
-            "type": "integer",
-            "minimum": 1,
-            "default": 100
+        "oneOf": [{
+          "title": "Enable this rule with default options",
+          "type": "boolean"
+        }, {
+          "type": "object",
+          "properties": {
+            "max": {
+              "title": "Maximum length of a sentence",
+              "type": "integer",
+              "minimum": 1,
+              "default": 100
+            }
           }
-        }
+        }],
+        "default": true
       },
       "no-start-duplicated-conjunction": {
-        "type": "object",
-        "properties": {
-          "interval": {
-            "title": "Interval of sentences",
-            "type": "integer",
-            "minimum": 1,
-            "default": 2
+        "oneOf": [{
+          "title": "Enable this rule with default options",
+          "type": "boolean"
+        }, {
+          "type": "object",
+          "properties": {
+            "interval": {
+              "title": "Interval of sentences",
+              "type": "integer",
+              "minimum": 1,
+              "default": 2
+            }
           }
-        }
+        }],
+        "default": true
       },
       "spellcheck-tech-word": {
+        "title": "Enable this rule",
         "type": "boolean",
-        "default": false
+        "default": true
       },
       "no-mix-dearu-desumasu": {
+        "title": "Enable this rule",
         "type": "boolean",
-        "default": false
+        "default": true
       }
     }
   }]

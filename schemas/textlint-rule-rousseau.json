@@ -10,6 +10,7 @@
         "title": "Level of importance",
         "type": "array",
         "items": {
+          "title": "Level",
           "type": "string",
           "enum": [
             "suggestion",
@@ -23,6 +24,7 @@
         "title": "Ignoring type of check",
         "type": "array",
         "items": {
+          "title": "Type of message",
           "type": "string",
           "enum": [
             "passive",

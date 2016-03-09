@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Enable this rule",
-  "type": "boolean",
-  "default": false
+  "type": "boolean"
 }

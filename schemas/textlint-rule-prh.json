@@ -10,6 +10,7 @@
         "title": "Path to YAML files",
         "type": "array",
         "items": {
+          "title": "YAML file",
           "type": "string",
           "minLength": 1
         },

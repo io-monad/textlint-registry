@@ -10,6 +10,7 @@
         "title": "Ignoring type of message",
         "type": "object",
         "additionalProperties": {
+          "title": "Type of message",
           "type": "array",
           "items": {
             "type": "string",
