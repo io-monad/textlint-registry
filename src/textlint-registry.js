@@ -1,6 +1,7 @@
 'use strict';
 
-import schemas from "./schemas";
+import schemasList from "../schemas-list.json";
+import path from "path";
 
 const TEXTLINT_RULE_PREFIX = 'textlint-rule-';
 
@@ -14,14 +15,15 @@ function stripRulePrefix(ruleName) {
 
 function getAvailableSchemas() {
   return Promise.resolve(
-    Object.keys(schemas).map((key) => stripRulePrefix(key))
+    Object.keys(schemasList).map((key) => stripRulePrefix(key))
   );
 }
 
 function getSchema(ruleName) {
   ruleName = TEXTLINT_RULE_PREFIX + stripRulePrefix(ruleName);
-  if (schemas[ruleName]) {
-    return Promise.resolve(schemas[ruleName]);
+  if (schemasList[ruleName]) {
+    const schemaJson = path.join(__dirname, "..", "schemas", schemasList[ruleName].file || {});
+    return Promise.resolve(require(schemaJson));
   } else {
     return Promise.reject(new Error(`Unknown schema name: ${ruleName}`));
   }

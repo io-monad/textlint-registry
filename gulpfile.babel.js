@@ -1,7 +1,9 @@
 import gulp from "gulp";
+import gutil from "gulp-util";
 import gulpLoadPlugins from "gulp-load-plugins";
 import {exec} from "child_process";
 import path from "path";
+import through from "through2";
 
 const $ = gulpLoadPlugins()
 
@@ -16,19 +18,9 @@ gulp.task("build:src", ["build:schemas"], () => {
 });
 
 gulp.task("build:schemas", () => {
-  return gulp.src("schemas/*.json", { base: path.join(__dirname, "schemas") })
-    .pipe($.wrap(
-      '  "<%= file.relative.replace(/\\.json$/, "") %>":\n' +
-      '<%= JSON.stringify(contents, null, 2).replace(/^/mg, "    ") %>'
-    ))
-    .pipe($.concat("schemas.js", { newLine: ",\n" }))
-    .pipe($.wrap([
-      "// This is auto-generated file",
-      "export default {",
-      "<%= contents %>",
-      "}"
-    ].join("\n")))
-    .pipe(gulp.dest("src"))
+  return gulp.src("schemas/**/*.json")
+    .pipe(buildSchemasList("schemas-list.json"))
+    .pipe(gulp.dest("."))
 });
 
 gulp.task("test", () => {
@@ -60,3 +52,29 @@ gulp.task("format", () => {
     .pipe($.jsbeautifier())
     .pipe(gulp.dest("schemas"))
 });
+
+function buildSchemasList(listFile) {
+  let first, schemas = {};
+  return through.obj(
+    function (file, enc, done) {
+      if (file.isNull() || file.isStream()) return done();
+      const schemaName = file.relative.replace(/\.json$/, "");
+      schemas[schemaName] = {
+        "name": schemaName,
+        "file": file.relative,
+      };
+      first = first || schemas[schemaName];
+      done();
+    },
+    function (done) {
+      if (!first) return;
+      this.push(new gutil.File({
+        cwd: first.cwd,
+        base: first.base,
+        path: path.join(first.base || ".", listFile),
+        contents: new Buffer(JSON.stringify(schemas, null, 2))
+      }));
+      done();
+    }
+  );
+}
