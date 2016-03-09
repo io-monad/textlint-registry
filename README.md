@@ -65,6 +65,15 @@ registry.getSchema("general-novel-style-ja")
 });
 ```
 
+### Direct require
+
+You can `require()` any json schema file to load directly. Note that this is synchronous.
+
+```
+let alexSchema = require("textlint-registry/schemas/textlint-rule-alex");
+// returns an Object of the content of `schemas/textlint-rule-alex.json`
+```
+
 ## How to build
 
 ```
