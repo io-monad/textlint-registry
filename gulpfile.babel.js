@@ -17,7 +17,10 @@ gulp.task("build:src", ["build:schemas"], () => {
 
 gulp.task("build:schemas", () => {
   return gulp.src("schemas/*.json", { base: path.join(__dirname, "schemas") })
-    .pipe($.wrap('  "<%= file.relative.replace(/\\.json$/, "") %>": <%= JSON.stringify(contents) %>'))
+    .pipe($.wrap(
+      '  "<%= file.relative.replace(/\\.json$/, "") %>":\n' +
+      '<%= JSON.stringify(contents, null, 2).replace(/^/mg, "    ") %>'
+    ))
     .pipe($.concat("schemas.js", { newLine: ",\n" }))
     .pipe($.wrap([
       "// This is auto-generated file",
