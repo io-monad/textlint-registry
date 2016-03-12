@@ -7,11 +7,11 @@ import through from "through2";
 
 const $ = gulpLoadPlugins()
 
-gulp.task("default", $.sequence("json", "build"));
-gulp.task("json", $.sequence("lint", "validate", "format"));
+gulp.task("default", $.sequence("test", "build"));
 gulp.task("build", ["build:src", "build:schemas"]);
+gulp.task("test", ["test:src", "test:schemas"]);
 
-gulp.task("build:src", ["build:schemas"], () => {
+gulp.task("build:src", () => {
   return gulp.src("src/**/*.js")
     .pipe($.babel())
     .pipe(gulp.dest("lib"))
@@ -19,22 +19,26 @@ gulp.task("build:src", ["build:schemas"], () => {
 
 gulp.task("build:schemas", () => {
   return gulp.src("schemas/**/*.json")
+    .pipe($.jsbeautifier())
+    .pipe(gulp.dest("schemas"))
     .pipe(buildSchemasList("schemas-list.json"))
     .pipe(gulp.dest("."))
 });
 
-gulp.task("test", () => {
+gulp.task("test:src", () => {
   return gulp.src("test/**/*.js")
     .pipe($.mocha())
 });
 
-gulp.task("lint", () => {
+gulp.task("test:schemas", $.sequence("schema:lint", "schema:validate"));
+
+gulp.task("schema:lint", () => {
   return gulp.src("schemas/**/*.json")
     .pipe($.jsonlint())
     .pipe($.jsonlint.failOnError());
 });
 
-gulp.task("validate", (cb) => {
+gulp.task("schema:validate", (cb) => {
   exec(
     "node_modules/.bin/z-schema vendor/json-schema-draft-04.json schemas/*.json",
     (err, stdout, stderr) => {
@@ -58,11 +62,6 @@ gulp.task("validate", (cb) => {
   )
 });
 
-gulp.task("format", () => {
-  return gulp.src("schemas/**/*.json")
-    .pipe($.jsbeautifier())
-    .pipe(gulp.dest("schemas"))
-});
 
 function buildSchemasList(listFile) {
   let first, schemas = {};
