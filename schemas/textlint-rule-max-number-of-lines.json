@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "textlint-rule-max-number-of-lines confugration",
+  "title": "textlint-rule-max-number-of-lines configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"
