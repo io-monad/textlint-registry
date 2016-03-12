@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "textlint-rule-unexpanded-acronym configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"
@@ -27,6 +28,12 @@
           "minLength": 1
         },
         "uniqueItems": true
+      },
+      "severity": {
+        "title": "Severity of lint messages",
+        "type": "string",
+        "enum": ["error", "warning", "info"],
+        "default": "error"
       }
     }
   }]

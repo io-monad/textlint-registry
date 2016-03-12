@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "textlint-rule-max-length-of-title configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"
@@ -30,6 +31,12 @@
       "######": {
         "title": "Maximum length of h6 title",
         "type": "integer"
+      },
+      "severity": {
+        "title": "Severity of lint messages",
+        "type": "string",
+        "enum": ["error", "warning", "info"],
+        "default": "error"
       }
     }
   }]

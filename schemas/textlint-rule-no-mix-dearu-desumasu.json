@@ -1,5 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Enable this rule",
-  "type": "boolean"
+  "title": "textlint-rule-no-mix-dearu-desumasu configuration",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "severity": {
+        "title": "Severity of lint messages",
+        "type": "string",
+        "enum": ["error", "warning", "info"],
+        "default": "error"
+      }
+    }
+  }]
 }

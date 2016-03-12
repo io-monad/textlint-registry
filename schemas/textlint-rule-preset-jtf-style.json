@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "textlint-rule-preset-jtf-style configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"
@@ -153,6 +154,12 @@
       "4.3.8.一重引用符": {
         "type": "boolean",
         "default": true
+      },
+      "severity": {
+        "title": "Severity of lint messages",
+        "type": "string",
+        "enum": ["error", "warning", "info"],
+        "default": "error"
       }
     }
   }]

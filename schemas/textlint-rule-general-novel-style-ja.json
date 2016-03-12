@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "textlint-rule-general-novel-style-ja configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"
@@ -71,6 +72,12 @@
           "enum": [false]
         }],
         "default": 2
+      },
+      "severity": {
+        "title": "Severity of lint messages",
+        "type": "string",
+        "enum": ["error", "warning", "info"],
+        "default": "error"
       }
     }
   }]
