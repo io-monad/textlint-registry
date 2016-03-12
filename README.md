@@ -83,13 +83,15 @@ $ gulp build
 
 And you will see built files in `lib` directory.
 
+Note that it could update JSON Schema files in `schemas` directory as well as it also runs jsonbeautifier for schema files.
+
 Since building codes uses babel ES6 compiler, `lib` directory MUST NOT be comitted to the repository.
 
 ```
 $ gulp test
 ```
 
-It starts mocha to run tests in `test` directory.
+It starts mocha to run tests in `test` directory. Also, it validates all schema files against meta-schemas.
 
 ## Contributing
 

@@ -10,6 +10,7 @@ const $ = gulpLoadPlugins()
 gulp.task("default", $.sequence("test", "build"));
 gulp.task("build", ["build:src", "build:schemas"]);
 gulp.task("test", ["test:src", "test:schemas"]);
+gulp.task("json", $.sequence("test:schemas", "build:schemas"))
 
 gulp.task("build:src", () => {
   return gulp.src("src/**/*.js")
