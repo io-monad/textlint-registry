@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/io-monad/textlint-registry/master/meta-schema.json#",
+  "title": "Meta schema for textlint rule schemas",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "title", "oneOf"],
+  "properties": {
+    "$schema": { "enum": ["http://json-schema.org/draft-04/schema#"] },
+    "title": {
+      "type": "string",
+      "pattern": "^textlint-rule-[a-zA-Z0-9_-]+ configuration$"
+    },
+    "oneOf": {
+      "$ref": "#/definitions/ruleConfigOneOf"
+    }
+  },
+  "definitions": {
+    "ruleConfigOneOf": {
+      "type": "array",
+      "additionalItems": false,
+      "items": [
+        {
+          "title": "Every ruleConfig can be a boolean to enable the rule",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["title", "type"],
+          "properties": {
+            "title": { "enum": ["Enable this rule with default options"] },
+            "type": { "enum": ["boolean"] }
+          }
+        },
+        {
+          "title": "Every ruleConfig can be an object of rule options",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "properties"],
+          "properties": {
+            "type": { "enum": ["object"] },
+            "properties": {
+              "oneOf": [
+                {
+                  "title": "Rule options for single rule",
+                  "type": "object",
+                  "additionalProperties": true,
+                  "required": ["severity"],
+                  "properties": {
+                    "severity": {
+                      "title": "Every rule should have severity option",
+                      "type": "object",
+                      "additionalProperties": true,
+                      "required": ["title", "type", "enum", "default"],
+                      "properties": {
+                        "title": { "enum": ["Severity of lint messages"] },
+                        "type": { "enum": ["string"] },
+                        "enum": {
+                          "type": "array",
+                          "additionalItems": false,
+                          "items": [
+                            { "enum": ["error"] },
+                            { "enum": ["warning"] },
+                            { "enum": ["info"] }
+                          ]
+                        },
+                        "default": { "enum": ["error"] }
+                      }
+                    }
+                  }
+                },
+                {
+                  "title": "Rule options for child rules in preset",
+                  "type": "object",
+                  "minProperties": 1,
+                  "additionalProperties": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["title", "oneOf"],
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "pattern": "^textlint-rule-[a-zA-Z0-9_-]+ configuration$"
+                      },
+                      "oneOf": {
+                        "$ref": "#/definitions/ruleConfigOneOf"
+                      },
+                      "default": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

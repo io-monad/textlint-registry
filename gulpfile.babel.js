@@ -7,7 +7,7 @@ import through from "through2";
 
 const $ = gulpLoadPlugins()
 
-gulp.task("default", ["build"]);
+gulp.task("default", $.sequence("json", "build"));
 gulp.task("json", $.sequence("lint", "validate", "format"));
 gulp.task("build", ["build:src", "build:schemas"]);
 
@@ -41,8 +41,19 @@ gulp.task("validate", (cb) => {
       if (err) {
         console.log(stdout);
         console.log(stderr);
+        cb(err);
+      } else {
+        exec(
+          "node_modules/.bin/z-schema ./meta-schema.json schemas/*.json",
+          (err, stdout, stderr) => {
+            if (err) {
+              console.log(stdout);
+              console.log(stderr);
+            }
+            cb(err);
+          }
+        );
       }
-      cb(err);
     }
   )
 });
