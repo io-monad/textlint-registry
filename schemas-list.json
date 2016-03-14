@@ -3,6 +3,10 @@
     "name": "textlint-rule-alex",
     "file": "textlint-rule-alex.json"
   },
+  "textlint-rule-common-misspellings": {
+    "name": "textlint-rule-common-misspellings",
+    "file": "textlint-rule-common-misspellings.json"
+  },
   "textlint-rule-general-novel-style-ja": {
     "name": "textlint-rule-general-novel-style-ja",
     "file": "textlint-rule-general-novel-style-ja.json"
