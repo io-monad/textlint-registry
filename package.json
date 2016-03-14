@@ -1,6 +1,6 @@
 {
   "name": "textlint-registry",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "Unofficial registry of JSON Schema files of textlint rule configurations",
   "author": "IRIDE Monad <iride.monad@gmail.com>",
   "license": "Unlicense",
