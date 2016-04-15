@@ -1,6 +1,6 @@
 # textlint-registry
 
-[![Build Status](https://travis-ci.org/io-monad/textlint-registry.svg?branch=master)](https://travis-ci.org/io-monad/textlint-registry)
+[![wercker status](https://app.wercker.com/status/d16fb621119f038b8d38516d92521e8c/s/master "wercker status")](https://app.wercker.com/project/bykey/d16fb621119f038b8d38516d92521e8c)
 
 Visit [textlint official website](http://textlint.github.io/) for more information.
 
