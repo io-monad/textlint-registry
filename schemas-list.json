@@ -1,158 +1,197 @@
 {
   "textlint-rule-alex": {
     "name": "textlint-rule-alex",
-    "file": "textlint-rule-alex.json"
+    "file": "textlint-rule-alex.json",
+    "version": "1.0.1"
   },
   "textlint-rule-common-misspellings": {
     "name": "textlint-rule-common-misspellings",
-    "file": "textlint-rule-common-misspellings.json"
+    "file": "textlint-rule-common-misspellings.json",
+    "version": "1.0.1"
   },
   "textlint-rule-editorconfig": {
     "name": "textlint-rule-editorconfig",
-    "file": "textlint-rule-editorconfig.json"
+    "file": "textlint-rule-editorconfig.json",
+    "version": "1.0.2"
   },
   "textlint-rule-en-max-word-count": {
     "name": "textlint-rule-en-max-word-count",
-    "file": "textlint-rule-en-max-word-count.json"
+    "file": "textlint-rule-en-max-word-count.json",
+    "version": "1.0.0"
   },
   "textlint-rule-general-novel-style-ja": {
     "name": "textlint-rule-general-novel-style-ja",
-    "file": "textlint-rule-general-novel-style-ja.json"
+    "file": "textlint-rule-general-novel-style-ja.json",
+    "version": "1.3.0"
   },
   "textlint-rule-ginger": {
     "name": "textlint-rule-ginger",
-    "file": "textlint-rule-ginger.json"
+    "file": "textlint-rule-ginger.json",
+    "version": "0.1.6"
   },
   "textlint-rule-incremental-headers": {
     "name": "textlint-rule-incremental-headers",
-    "file": "textlint-rule-incremental-headers.json"
+    "file": "textlint-rule-incremental-headers.json",
+    "version": "0.2.0"
   },
   "textlint-rule-ja-yahoo-kousei": {
     "name": "textlint-rule-ja-yahoo-kousei",
-    "file": "textlint-rule-ja-yahoo-kousei.json"
+    "file": "textlint-rule-ja-yahoo-kousei.json",
+    "version": "1.0.2"
   },
   "textlint-rule-max-appearence-count-of-words": {
     "name": "textlint-rule-max-appearence-count-of-words",
-    "file": "textlint-rule-max-appearence-count-of-words.json"
+    "file": "textlint-rule-max-appearence-count-of-words.json",
+    "version": "1.0.1"
   },
   "textlint-rule-max-comma": {
     "name": "textlint-rule-max-comma",
-    "file": "textlint-rule-max-comma.json"
+    "file": "textlint-rule-max-comma.json",
+    "version": "1.0.1"
   },
   "textlint-rule-max-kanji-continuous-len": {
     "name": "textlint-rule-max-kanji-continuous-len",
-    "file": "textlint-rule-max-kanji-continuous-len.json"
+    "file": "textlint-rule-max-kanji-continuous-len.json",
+    "version": "1.0.1"
   },
   "textlint-rule-max-length-of-title": {
     "name": "textlint-rule-max-length-of-title",
-    "file": "textlint-rule-max-length-of-title.json"
+    "file": "textlint-rule-max-length-of-title.json",
+    "version": "1.0.1"
   },
   "textlint-rule-max-number-of-lines": {
     "name": "textlint-rule-max-number-of-lines",
-    "file": "textlint-rule-max-number-of-lines.json"
+    "file": "textlint-rule-max-number-of-lines.json",
+    "version": "1.0.2"
   },
   "textlint-rule-max-ten": {
     "name": "textlint-rule-max-ten",
-    "file": "textlint-rule-max-ten.json"
+    "file": "textlint-rule-max-ten.json",
+    "version": "2.0.1"
   },
   "textlint-rule-ng-word": {
     "name": "textlint-rule-ng-word",
-    "file": "textlint-rule-ng-word.json"
+    "file": "textlint-rule-ng-word.json",
+    "version": "1.0.0"
   },
   "textlint-rule-no-dead-link": {
     "name": "textlint-rule-no-dead-link",
-    "file": "textlint-rule-no-dead-link.json"
+    "file": "textlint-rule-no-dead-link.json",
+    "version": "0.2.0"
   },
   "textlint-rule-no-double-negative-ja": {
     "name": "textlint-rule-no-double-negative-ja",
-    "file": "textlint-rule-no-double-negative-ja.json"
+    "file": "textlint-rule-no-double-negative-ja.json",
+    "version": "1.0.4"
   },
   "textlint-rule-no-doubled-conjunction": {
     "name": "textlint-rule-no-doubled-conjunction",
-    "file": "textlint-rule-no-doubled-conjunction.json"
+    "file": "textlint-rule-no-doubled-conjunction.json",
+    "version": "1.0.1"
   },
   "textlint-rule-no-doubled-conjunctive-particle-ga": {
     "name": "textlint-rule-no-doubled-conjunctive-particle-ga",
-    "file": "textlint-rule-no-doubled-conjunctive-particle-ga.json"
+    "file": "textlint-rule-no-doubled-conjunctive-particle-ga.json",
+    "version": "1.0.2"
   },
   "textlint-rule-no-doubled-joshi": {
     "name": "textlint-rule-no-doubled-joshi",
-    "file": "textlint-rule-no-doubled-joshi.json"
+    "file": "textlint-rule-no-doubled-joshi.json",
+    "version": "3.2.1"
   },
   "textlint-rule-no-dropping-the-ra": {
     "name": "textlint-rule-no-dropping-the-ra",
-    "file": "textlint-rule-no-dropping-the-ra.json"
+    "file": "textlint-rule-no-dropping-the-ra.json",
+    "version": "1.0.2"
   },
   "textlint-rule-no-exclamation-question-mark": {
     "name": "textlint-rule-no-exclamation-question-mark",
-    "file": "textlint-rule-no-exclamation-question-mark.json"
+    "file": "textlint-rule-no-exclamation-question-mark.json",
+    "version": "1.0.2"
   },
   "textlint-rule-no-hankaku-kana": {
     "name": "textlint-rule-no-hankaku-kana",
-    "file": "textlint-rule-no-hankaku-kana.json"
+    "file": "textlint-rule-no-hankaku-kana.json",
+    "version": "1.0.1"
   },
   "textlint-rule-no-mix-dearu-desumasu": {
     "name": "textlint-rule-no-mix-dearu-desumasu",
-    "file": "textlint-rule-no-mix-dearu-desumasu.json"
+    "file": "textlint-rule-no-mix-dearu-desumasu.json",
+    "version": "2.2.1"
   },
   "textlint-rule-no-nfd": {
     "name": "textlint-rule-no-nfd",
-    "file": "textlint-rule-no-nfd.json"
+    "file": "textlint-rule-no-nfd.json",
+    "version": "1.0.1"
   },
   "textlint-rule-no-start-duplicated-conjunction": {
     "name": "textlint-rule-no-start-duplicated-conjunction",
-    "file": "textlint-rule-no-start-duplicated-conjunction.json"
+    "file": "textlint-rule-no-start-duplicated-conjunction.json",
+    "version": "1.0.7"
   },
   "textlint-rule-no-todo": {
     "name": "textlint-rule-no-todo",
-    "file": "textlint-rule-no-todo.json"
+    "file": "textlint-rule-no-todo.json",
+    "version": "2.0.0"
   },
   "textlint-rule-preset-japanese": {
     "name": "textlint-rule-preset-japanese",
-    "file": "textlint-rule-preset-japanese.json"
+    "file": "textlint-rule-preset-japanese.json",
+    "version": "1.2.0"
   },
   "textlint-rule-preset-jtf-style": {
     "name": "textlint-rule-preset-jtf-style",
-    "file": "textlint-rule-preset-jtf-style.json"
+    "file": "textlint-rule-preset-jtf-style.json",
+    "version": "2.2.0"
   },
   "textlint-rule-prh": {
     "name": "textlint-rule-prh",
-    "file": "textlint-rule-prh.json"
+    "file": "textlint-rule-prh.json",
+    "version": "3.0.1"
   },
   "textlint-rule-report-node-types": {
     "name": "textlint-rule-report-node-types",
-    "file": "textlint-rule-report-node-types.json"
+    "file": "textlint-rule-report-node-types.json",
+    "version": "1.0.1"
   },
   "textlint-rule-rousseau": {
     "name": "textlint-rule-rousseau",
-    "file": "textlint-rule-rousseau.json"
+    "file": "textlint-rule-rousseau.json",
+    "version": "1.4.1"
   },
   "textlint-rule-sentence-length": {
     "name": "textlint-rule-sentence-length",
-    "file": "textlint-rule-sentence-length.json"
+    "file": "textlint-rule-sentence-length.json",
+    "version": "1.0.4"
   },
   "textlint-rule-sjsj": {
     "name": "textlint-rule-sjsj",
-    "file": "textlint-rule-sjsj.json"
+    "file": "textlint-rule-sjsj.json",
+    "version": "1.0.5"
   },
   "textlint-rule-spellcheck-tech-word": {
     "name": "textlint-rule-spellcheck-tech-word",
-    "file": "textlint-rule-spellcheck-tech-word.json"
+    "file": "textlint-rule-spellcheck-tech-word.json",
+    "version": "5.0.0"
   },
   "textlint-rule-spellchecker": {
     "name": "textlint-rule-spellchecker",
-    "file": "textlint-rule-spellchecker.json"
+    "file": "textlint-rule-spellchecker.json",
+    "version": "0.1.4"
   },
   "textlint-rule-unexpanded-acronym": {
     "name": "textlint-rule-unexpanded-acronym",
-    "file": "textlint-rule-unexpanded-acronym.json"
+    "file": "textlint-rule-unexpanded-acronym.json",
+    "version": "1.2.1"
   },
   "textlint-rule-web-plus-db": {
     "name": "textlint-rule-web-plus-db",
-    "file": "textlint-rule-web-plus-db.json"
+    "file": "textlint-rule-web-plus-db.json",
+    "version": "1.1.5"
   },
   "textlint-rule-write-good": {
     "name": "textlint-rule-write-good",
-    "file": "textlint-rule-write-good.json"
+    "file": "textlint-rule-write-good.json",
+    "version": "0.1.4"
   }
 }

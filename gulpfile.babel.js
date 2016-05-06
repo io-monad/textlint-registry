@@ -54,10 +54,15 @@ function buildSchemasList(listFile) {
     function (file, enc, done) {
       if (file.isNull() || file.isStream()) return done();
       const schemaName = file.relative.replace(/\.json$/, "");
+      const schema = JSON.parse(file.contents);
+      const version = schema.title.match(/ v([0-9]+\.[0-9]+\.[0-9]+(?:-\w+)?)/)[1];
+
       schemas[schemaName] = {
         "name": schemaName,
         "file": file.relative,
+        "version": version,
       };
+
       first = first || schemas[schemaName];
       done();
     },
