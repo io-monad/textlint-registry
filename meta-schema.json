@@ -75,14 +75,11 @@
                   "additionalProperties": {
                     "type": "object",
                     "additionalProperties": false,
-                    "required": ["title", "oneOf"],
+                    "required": ["$ref", "default"],
                     "properties": {
-                      "title": {
+                      "$ref": {
                         "type": "string",
-                        "pattern": "^textlint-rule-[a-zA-Z0-9_-]+ configuration$"
-                      },
-                      "oneOf": {
-                        "$ref": "#/definitions/ruleConfigOneOf"
+                        "pattern": "^textlint-rule-[a-zA-Z0-9_-]+\\.json#$"
                       },
                       "default": {
                         "type": "boolean"

@@ -8,163 +8,35 @@
     "type": "object",
     "properties": {
       "max-ten": {
-        "title": "textlint-rule-max-ten configuration",
-        "oneOf": [{
-          "title": "Enable this rule with default options",
-          "type": "boolean"
-        }, {
-          "type": "object",
-          "properties": {
-            "max": {
-              "title": "Maximum number of \"、\" allowed in a sentence",
-              "type": "integer",
-              "minimum": 1,
-              "default": 3
-            },
-            "strict": {
-              "title": "Strict check",
-              "type": "boolean",
-              "default": false
-            },
-            "severity": {
-              "title": "Severity of lint messages",
-              "type": "string",
-              "enum": ["error", "warning", "info"],
-              "default": "error"
-            }
-          }
-        }],
+        "$ref": "textlint-rule-max-ten.json#",
+        "default": true
+      },
+      "no-doubled-conjunctive-particle-ga": {
+        "$ref": "textlint-rule-no-doubled-conjunctive-particle-ga.json#",
+        "default": true
+      },
+      "no-doubled-conjunction": {
+        "$ref": "textlint-rule-no-doubled-conjunction.json#",
         "default": true
       },
       "no-double-negative-ja": {
-        "title": "textlint-rule-no-double-negative-ja configuration",
-        "oneOf": [{
-          "title": "Enable this rule with default options",
-          "type": "boolean"
-        }, {
-          "type": "object",
-          "properties": {
-            "severity": {
-              "title": "Severity of lint messages",
-              "type": "string",
-              "enum": ["error", "warning", "info"],
-              "default": "error"
-            }
-          }
-        }],
+        "$ref": "textlint-rule-no-double-negative-ja.json#",
         "default": true
       },
       "no-doubled-joshi": {
-        "title": "textlint-rule-no-doubled-joshi configuration",
-        "oneOf": [{
-          "title": "Enable this rule with default options",
-          "type": "boolean"
-        }, {
-          "type": "object",
-          "properties": {
-            "min_interval": {
-              "title": "Minimum interval of joshi",
-              "type": "integer",
-              "minimum": 1,
-              "default": 1
-            },
-            "strict": {
-              "title": "Strict check",
-              "type": "boolean",
-              "default": false
-            },
-            "severity": {
-              "title": "Severity of lint messages",
-              "type": "string",
-              "enum": ["error", "warning", "info"],
-              "default": "error"
-            }
-          }
-        }],
+        "$ref": "textlint-rule-no-doubled-joshi.json#",
         "default": true
       },
       "sentence-length": {
-        "title": "textlint-rule-sentence-length configuration",
-        "oneOf": [{
-          "title": "Enable this rule with default options",
-          "type": "boolean"
-        }, {
-          "type": "object",
-          "properties": {
-            "max": {
-              "title": "Maximum length of a sentence",
-              "type": "integer",
-              "minimum": 1,
-              "default": 100
-            },
-            "severity": {
-              "title": "Severity of lint messages",
-              "type": "string",
-              "enum": ["error", "warning", "info"],
-              "default": "error"
-            }
-          }
-        }],
-        "default": true
-      },
-      "no-start-duplicated-conjunction": {
-        "title": "textlint-rule-no-start-duplicated configuration",
-        "oneOf": [{
-          "title": "Enable this rule with default options",
-          "type": "boolean"
-        }, {
-          "type": "object",
-          "properties": {
-            "interval": {
-              "title": "Interval of sentences",
-              "type": "integer",
-              "minimum": 1,
-              "default": 2
-            },
-            "severity": {
-              "title": "Severity of lint messages",
-              "type": "string",
-              "enum": ["error", "warning", "info"],
-              "default": "error"
-            }
-          }
-        }],
+        "$ref": "textlint-rule-sentence-length.json#",
         "default": true
       },
       "spellcheck-tech-word": {
-        "title": "textlint-rule-spellcheck-tech-word configuration",
-        "oneOf": [{
-          "title": "Enable this rule with default options",
-          "type": "boolean"
-        }, {
-          "type": "object",
-          "properties": {
-            "severity": {
-              "title": "Severity of lint messages",
-              "type": "string",
-              "enum": ["error", "warning", "info"],
-              "default": "error"
-            }
-          }
-        }],
+        "$ref": "textlint-rule-spellcheck-tech-word.json#",
         "default": true
       },
       "no-mix-dearu-desumasu": {
-        "title": "textlint-rule-no-mix-dearu-desumasu configuration",
-        "oneOf": [{
-          "title": "Enable this rule with default options",
-          "type": "boolean"
-        }, {
-          "type": "object",
-          "properties": {
-            "severity": {
-              "title": "Severity of lint messages",
-              "type": "string",
-              "enum": ["error", "warning", "info"],
-              "default": "error"
-            }
-          }
-        }],
+        "$ref": "textlint-rule-no-mix-dearu-desumasu.json#",
         "default": true
       }
     }
