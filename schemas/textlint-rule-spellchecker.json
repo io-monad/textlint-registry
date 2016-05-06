@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "textlint-rule-spellchecker configuration",
+  "title": "textlint-rule-spellchecker v0.1.4 configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"

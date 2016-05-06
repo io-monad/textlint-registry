@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "textlint-rule-ja-yahoo-kousei configuration",
+  "title": "textlint-rule-ja-yahoo-kousei v1.0.2 configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"

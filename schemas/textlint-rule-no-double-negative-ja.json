@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "textlint-rule-no-double-negative-ja configuration",
+  "title": "textlint-rule-no-double-negative-ja v1.0.4 configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "textlint-rule-incremental-headers configuration",
+  "title": "textlint-rule-incremental-headers v0.2.0 configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"

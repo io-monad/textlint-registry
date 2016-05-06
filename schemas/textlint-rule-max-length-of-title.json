@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "textlint-rule-max-length-of-title configuration",
+  "title": "textlint-rule-max-length-of-title v1.0.1 configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"

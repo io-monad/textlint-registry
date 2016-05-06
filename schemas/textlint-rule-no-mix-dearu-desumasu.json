@@ -1,12 +1,30 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "textlint-rule-no-mix-dearu-desumasu configuration",
+  "title": "textlint-rule-no-mix-dearu-desumasu v2.2.1 configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"
   }, {
     "type": "object",
     "properties": {
+      "preferInHeader": {
+        "title": "Preferred style in header",
+        "type": "string",
+        "enum": ["", "である", "ですます"],
+        "default": ""
+      },
+      "preferInBody": {
+        "title": "Preferred style in body",
+        "type": "string",
+        "enum": ["", "である", "ですます"],
+        "default": ""
+      },
+      "preferInList": {
+        "title": "Preferred style in list",
+        "type": "string",
+        "enum": ["", "である", "ですます"],
+        "default": ""
+      },
       "severity": {
         "title": "Severity of lint messages",
         "type": "string",

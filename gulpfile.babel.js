@@ -39,28 +39,12 @@ gulp.task("schema:lint", () => {
     .pipe($.jsonlint.failOnError());
 });
 
-gulp.task("schema:validate", (cb) => {
-  exec(
-    "node_modules/.bin/z-schema vendor/json-schema-draft-04.json schemas/*.json",
-    (err, stdout, stderr) => {
-      if (err) {
-        console.log(stdout);
-        console.log(stderr);
-        cb(err);
-      } else {
-        exec(
-          "node_modules/.bin/z-schema ./meta-schema.json schemas/*.json",
-          (err, stdout, stderr) => {
-            if (err) {
-              console.log(stdout);
-              console.log(stderr);
-            }
-            cb(err);
-          }
-        );
-      }
-    }
-  )
+gulp.task("schema:validate", () => {
+  return gulp.src("schemas/**/*.json")
+    .pipe($.tv4("vendor/json-schema-draft-04.json"))
+    .pipe(tv4Report("json-schema-draft-04"))
+    .pipe($.tv4("./meta-schema.json"))
+    .pipe(tv4Report("meta-schema"));
 });
 
 
@@ -70,10 +54,15 @@ function buildSchemasList(listFile) {
     function (file, enc, done) {
       if (file.isNull() || file.isStream()) return done();
       const schemaName = file.relative.replace(/\.json$/, "");
+      const schema = JSON.parse(file.contents);
+      const version = schema.title.match(/ v([0-9]+\.[0-9]+\.[0-9]+(?:-\w+)?)/)[1];
+
       schemas[schemaName] = {
         "name": schemaName,
         "file": file.relative,
+        "version": version,
       };
+
       first = first || schemas[schemaName];
       done();
     },
@@ -88,4 +77,25 @@ function buildSchemasList(listFile) {
       done();
     }
   );
+}
+
+function tv4Report(label) {
+  return through.obj(function (file, enc, done) {
+    if (!file.tv4.valid) {
+      if (file.tv4.missing && file.tv4.missing.length > 0) {
+        gutil.log(
+          gutil.colors.yellow("Missing schema"), `in ${file.relative}:`,
+          file.tv4.missing
+        );
+      }
+      if (file.tv4.error) {
+        gutil.log(
+          gutil.colors.red("Validation error"), `in ${file.relative}`,
+          file.tv4.error
+        );
+      }
+      return done(new gutil.PluginError("tv4", `${label} validation error in ${file.relative}`));
+    }
+    return done(null, file);
+  });
 }
