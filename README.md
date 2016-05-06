@@ -69,8 +69,8 @@ registry.getSchema("general-novel-style-ja")
 
 You can `require()` any json schema file to load directly. Note that this is synchronous.
 
-```
-let alexSchema = require("textlint-registry/schemas/textlint-rule-alex");
+```js
+let alexSchema = require("textlint-registry/schemas/textlint-rule-alex.json");
 // returns an Object of the content of `schemas/textlint-rule-alex.json`
 ```
 
