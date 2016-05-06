@@ -7,6 +7,24 @@
   }, {
     "type": "object",
     "properties": {
+      "preferInHeader": {
+        "title": "Preferred style in header",
+        "type": "string",
+        "enum": ["", "である", "ですます"],
+        "default": ""
+      },
+      "preferInBody": {
+        "title": "Preferred style in body",
+        "type": "string",
+        "enum": ["", "である", "ですます"],
+        "default": ""
+      },
+      "preferInList": {
+        "title": "Preferred style in list",
+        "type": "string",
+        "enum": ["", "である", "ですます"],
+        "default": ""
+      },
       "severity": {
         "title": "Severity of lint messages",
         "type": "string",
