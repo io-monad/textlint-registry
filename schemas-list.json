@@ -7,9 +7,21 @@
     "name": "textlint-rule-common-misspellings",
     "file": "textlint-rule-common-misspellings.json"
   },
+  "textlint-rule-editorconfig": {
+    "name": "textlint-rule-editorconfig",
+    "file": "textlint-rule-editorconfig.json"
+  },
+  "textlint-rule-en-max-word-count": {
+    "name": "textlint-rule-en-max-word-count",
+    "file": "textlint-rule-en-max-word-count.json"
+  },
   "textlint-rule-general-novel-style-ja": {
     "name": "textlint-rule-general-novel-style-ja",
     "file": "textlint-rule-general-novel-style-ja.json"
+  },
+  "textlint-rule-ginger": {
+    "name": "textlint-rule-ginger",
+    "file": "textlint-rule-ginger.json"
   },
   "textlint-rule-incremental-headers": {
     "name": "textlint-rule-incremental-headers",
@@ -22,6 +34,14 @@
   "textlint-rule-max-appearence-count-of-words": {
     "name": "textlint-rule-max-appearence-count-of-words",
     "file": "textlint-rule-max-appearence-count-of-words.json"
+  },
+  "textlint-rule-max-comma": {
+    "name": "textlint-rule-max-comma",
+    "file": "textlint-rule-max-comma.json"
+  },
+  "textlint-rule-max-kanji-continuous-len": {
+    "name": "textlint-rule-max-kanji-continuous-len",
+    "file": "textlint-rule-max-kanji-continuous-len.json"
   },
   "textlint-rule-max-length-of-title": {
     "name": "textlint-rule-max-length-of-title",
@@ -38,6 +58,10 @@
   "textlint-rule-ng-word": {
     "name": "textlint-rule-ng-word",
     "file": "textlint-rule-ng-word.json"
+  },
+  "textlint-rule-no-dead-link": {
+    "name": "textlint-rule-no-dead-link",
+    "file": "textlint-rule-no-dead-link.json"
   },
   "textlint-rule-no-double-negative-ja": {
     "name": "textlint-rule-no-double-negative-ja",
@@ -59,9 +83,21 @@
     "name": "textlint-rule-no-dropping-the-ra",
     "file": "textlint-rule-no-dropping-the-ra.json"
   },
+  "textlint-rule-no-exclamation-question-mark": {
+    "name": "textlint-rule-no-exclamation-question-mark",
+    "file": "textlint-rule-no-exclamation-question-mark.json"
+  },
+  "textlint-rule-no-hankaku-kana": {
+    "name": "textlint-rule-no-hankaku-kana",
+    "file": "textlint-rule-no-hankaku-kana.json"
+  },
   "textlint-rule-no-mix-dearu-desumasu": {
     "name": "textlint-rule-no-mix-dearu-desumasu",
     "file": "textlint-rule-no-mix-dearu-desumasu.json"
+  },
+  "textlint-rule-no-nfd": {
+    "name": "textlint-rule-no-nfd",
+    "file": "textlint-rule-no-nfd.json"
   },
   "textlint-rule-no-start-duplicated-conjunction": {
     "name": "textlint-rule-no-start-duplicated-conjunction",
@@ -83,6 +119,10 @@
     "name": "textlint-rule-prh",
     "file": "textlint-rule-prh.json"
   },
+  "textlint-rule-report-node-types": {
+    "name": "textlint-rule-report-node-types",
+    "file": "textlint-rule-report-node-types.json"
+  },
   "textlint-rule-rousseau": {
     "name": "textlint-rule-rousseau",
     "file": "textlint-rule-rousseau.json"
@@ -99,6 +139,10 @@
     "name": "textlint-rule-spellcheck-tech-word",
     "file": "textlint-rule-spellcheck-tech-word.json"
   },
+  "textlint-rule-spellchecker": {
+    "name": "textlint-rule-spellchecker",
+    "file": "textlint-rule-spellchecker.json"
+  },
   "textlint-rule-unexpanded-acronym": {
     "name": "textlint-rule-unexpanded-acronym",
     "file": "textlint-rule-unexpanded-acronym.json"
@@ -106,5 +150,9 @@
   "textlint-rule-web-plus-db": {
     "name": "textlint-rule-web-plus-db",
     "file": "textlint-rule-web-plus-db.json"
+  },
+  "textlint-rule-write-good": {
+    "name": "textlint-rule-write-good",
+    "file": "textlint-rule-write-good.json"
   }
 }

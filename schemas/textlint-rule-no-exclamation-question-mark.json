@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "textlint-rule-no-exclamation-question-mark configuration",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "allowHalfWidthExclamation": {
+        "title": "Allow to use half-width exclamation marks (!)",
+        "type": "boolean",
+        "default": false
+      },
+      "allowFullWidthExclamation": {
+        "title": "Allow to use full-width exclamation marks (！)",
+        "type": "boolean",
+        "default": false
+      },
+      "allowHalfWidthQuestion": {
+        "title": "Allow to use half-width question marks (?)",
+        "type": "boolean",
+        "default": false
+      },
+      "allowFullWidthQuestion": {
+        "title": "Allow to use full-width question marks (？)",
+        "type": "boolean",
+        "default": false
+      },
+      "severity": {
+        "title": "Severity of lint messages",
+        "type": "string",
+        "enum": ["error", "warning", "info"],
+        "default": "error"
+      }
+    }
+  }]
+}

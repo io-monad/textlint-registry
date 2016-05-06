@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "textlint-rule-write-good configuration",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "passive": {
+        "title": "Checks for passive voice",
+        "type": "boolean",
+        "default": true
+      },
+      "illusion": {
+        "title": "Checks for lexical illusions (repeated word)",
+        "type": "boolean",
+        "default": true
+      },
+      "so": {
+        "title": "Checks for \"so\" at the beginning of a sentence",
+        "type": "boolean",
+        "default": true
+      },
+      "thereIs": {
+        "title": "Checks for \"there is\" or \"there are\" at the beginning of a sentence",
+        "type": "boolean",
+        "default": true
+      },
+      "weasel": {
+        "title": "Checks for \"weasel words\"",
+        "type": "boolean",
+        "default": true
+      },
+      "adverb": {
+        "title": "Checks for adverbs that can weaken meaning (really, very, etc.)",
+        "type": "boolean",
+        "default": true
+      },
+      "tooWordy": {
+        "title": "Checks for wordy phrases and unnecessary words",
+        "type": "boolean",
+        "default": true
+      },
+      "cliches": {
+        "title": "Checks for common cliches",
+        "type": "boolean",
+        "default": true
+      },
+      "severity": {
+        "title": "Severity of lint messages",
+        "type": "string",
+        "enum": ["error", "warning", "info"],
+        "default": "error"
+      }
+    }
+  }]
+}

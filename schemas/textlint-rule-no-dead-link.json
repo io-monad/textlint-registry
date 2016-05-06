@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "textlint-rule-no-dead-link configuration",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "checkRelative": {
+        "title": "Enable checking against relative URIs",
+        "type": "boolean",
+        "default": false
+      },
+      "baseURI": {
+        "title": "Base URI for checking relative URIs",
+        "type": "string",
+        "format": "uri"
+      },
+      "ignore": {
+        "title": "Ignoring URIs",
+        "type": "array",
+        "items": {
+          "title": "URI",
+          "type": "string",
+          "format": "uri"
+        },
+        "uniqueItems": true
+      },
+      "severity": {
+        "title": "Severity of lint messages",
+        "type": "string",
+        "enum": ["error", "warning", "info"],
+        "default": "error"
+      }
+    }
+  }]
+}
