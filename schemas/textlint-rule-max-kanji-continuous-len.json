@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "textlint-rule-max-kanji-continuous-len configuration",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "max": {
+        "title": "Maximum length of continuous Kanji characters",
+        "type": "integer",
+        "minimum": 1,
+        "default": 5
+      },
+      "severity": {
+        "title": "Severity of lint messages",
+        "type": "string",
+        "enum": ["error", "warning", "info"],
+        "default": "error"
+      }
+    }
+  }]
+}

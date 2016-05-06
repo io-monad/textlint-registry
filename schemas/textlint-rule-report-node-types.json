@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "textlint-rule-report-node-types configuration",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "nodeTypes": {
+        "title": "Reporting node types",
+        "type": "array",
+        "items": {
+          "title": "Node type",
+          "type": "string",
+          "minLength": 1
+        },
+        "uniqueItems": true
+      },
+      "severity": {
+        "title": "Severity of lint messages",
+        "type": "string",
+        "enum": ["error", "warning", "info"],
+        "default": "error"
+      }
+    }
+  }]
+}
