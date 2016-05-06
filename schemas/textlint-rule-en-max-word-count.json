@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "textlint-rule-en-max-word-count configuration",
+  "title": "textlint-rule-en-max-word-count v1.0.0 configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"

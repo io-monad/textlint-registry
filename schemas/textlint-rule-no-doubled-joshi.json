@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "textlint-rule-no-doubled-joshi configuration",
+  "title": "textlint-rule-no-doubled-joshi v3.2.1 configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"

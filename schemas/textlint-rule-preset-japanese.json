@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "textlint-rule-preset-japanese configuration",
+  "title": "textlint-rule-preset-japanese v1.2.0 configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"

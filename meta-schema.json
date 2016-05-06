@@ -9,7 +9,7 @@
     "$schema": { "enum": ["http://json-schema.org/draft-04/schema#"] },
     "title": {
       "type": "string",
-      "pattern": "^textlint-rule-[a-zA-Z0-9_-]+ configuration$"
+      "pattern": "^textlint-rule-[a-zA-Z0-9_-]+ v[0-9\\.]+ configuration$"
     },
     "oneOf": {
       "$ref": "#/definitions/ruleConfigOneOf"

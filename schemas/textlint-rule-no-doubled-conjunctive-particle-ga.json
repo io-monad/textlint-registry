@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "textlint-rule-doubled-conjunctive-particle-ga configuration",
+  "title": "textlint-rule-no-doubled-conjunctive-particle-ga v1.0.2 configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"
