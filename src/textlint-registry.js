@@ -1,5 +1,3 @@
-'use strict';
-
 import schemasList from "../schemas-list.json";
 import path from "path";
 

@@ -1,5 +1,3 @@
-"use strict";
-
 import assert from "power-assert";
 import registry from "../src/textlint-registry";
 
