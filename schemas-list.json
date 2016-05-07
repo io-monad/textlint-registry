@@ -29,6 +29,11 @@
     "file": "textlint-rule-ginger.json",
     "version": "0.1.6"
   },
+  "textlint-rule-ignore-node-types": {
+    "name": "textlint-rule-ignore-node-types",
+    "file": "textlint-rule-ignore-node-types.json",
+    "version": "0.2.0"
+  },
   "textlint-rule-incremental-headers": {
     "name": "textlint-rule-incremental-headers",
     "file": "textlint-rule-incremental-headers.json",
@@ -133,6 +138,11 @@
     "name": "textlint-rule-no-todo",
     "file": "textlint-rule-no-todo.json",
     "version": "2.0.0"
+  },
+  "textlint-rule-one-white-space-between-zenkaku-and-hankaku-eiji": {
+    "name": "textlint-rule-one-white-space-between-zenkaku-and-hankaku-eiji",
+    "file": "textlint-rule-one-white-space-between-zenkaku-and-hankaku-eiji.json",
+    "version": "1.0.0"
   },
   "textlint-rule-preset-japanese": {
     "name": "textlint-rule-preset-japanese",
