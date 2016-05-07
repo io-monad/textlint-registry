@@ -1,6 +1,10 @@
 box: node
 build:
   steps:
+    - script:
+        name: enable root/sudo for npm
+        code: npm config set unsafe-perm true
+
     - npm-install
     - npm-test
     - io-monad/semantic-release@2.0.0:
