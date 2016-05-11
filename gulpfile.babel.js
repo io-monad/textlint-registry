@@ -1,7 +1,6 @@
 import gulp from "gulp";
 import gutil from "gulp-util";
 import gulpLoadPlugins from "gulp-load-plugins";
-import {exec} from "child_process";
 import path from "path";
 import through from "through2";
 
@@ -40,11 +39,15 @@ gulp.task("schema:lint", () => {
 });
 
 gulp.task("schema:validate", () => {
+  const schemas = {
+    "http://json-schema.org/draft-04/schema":
+      "vendor/json-schema-draft-04.json",
+    "https://raw.githubusercontent.com/io-monad/textlint-registry/master/meta-schema.json":
+      "./meta-schema.json",
+  };
   return gulp.src("schemas/**/*.json")
-    .pipe($.tv4("vendor/json-schema-draft-04.json"))
-    .pipe(tv4Report("json-schema-draft-04"))
-    .pipe($.tv4("./meta-schema.json"))
-    .pipe(tv4Report("meta-schema"));
+    .pipe($.jsonSchema("vendor/json-schema-draft-04.json", { schemas }))
+    .pipe($.jsonSchema("./meta-schema.json", { schemas }));
 });
 
 
@@ -77,25 +80,4 @@ function buildSchemasList(listFile) {
       done();
     }
   );
-}
-
-function tv4Report(label) {
-  return through.obj(function (file, enc, done) {
-    if (!file.tv4.valid) {
-      if (file.tv4.missing && file.tv4.missing.length > 0) {
-        gutil.log(
-          gutil.colors.yellow("Missing schema"), `in ${file.relative}:`,
-          file.tv4.missing
-        );
-      }
-      if (file.tv4.error) {
-        gutil.log(
-          gutil.colors.red("Validation error"), `in ${file.relative}`,
-          file.tv4.error
-        );
-      }
-      return done(new gutil.PluginError("tv4", `${label} validation error in ${file.relative}`));
-    }
-    return done(null, file);
-  });
 }
