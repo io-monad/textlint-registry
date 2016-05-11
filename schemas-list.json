@@ -122,7 +122,7 @@
   "textlint-rule-no-mix-dearu-desumasu": {
     "name": "textlint-rule-no-mix-dearu-desumasu",
     "file": "textlint-rule-no-mix-dearu-desumasu.json",
-    "version": "2.2.1"
+    "version": "3.0.0"
   },
   "textlint-rule-no-nfd": {
     "name": "textlint-rule-no-nfd",
