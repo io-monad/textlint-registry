@@ -29,10 +29,15 @@
     "file": "textlint-rule-ginger.json",
     "version": "0.1.6"
   },
+  "textlint-rule-ignore-comments": {
+    "name": "textlint-rule-ignore-comments",
+    "file": "textlint-rule-ignore-comments.json",
+    "version": "1.1.0"
+  },
   "textlint-rule-ignore-node-types": {
     "name": "textlint-rule-ignore-node-types",
     "file": "textlint-rule-ignore-node-types.json",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "textlint-rule-incremental-headers": {
     "name": "textlint-rule-incremental-headers",

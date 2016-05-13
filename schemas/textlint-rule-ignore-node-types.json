@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "textlint-rule-ignore-node-types v0.2.0 configuration",
+  "title": "textlint-rule-ignore-node-types v0.3.0 configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"

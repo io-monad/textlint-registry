@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "textlint-rule-ignore-comments v1.1.0 configuration",
+  "oneOf": [{
+    "title": "Enable this rule with default options",
+    "type": "boolean"
+  }, {
+    "type": "object",
+    "properties": {
+      "enablingComment": {
+        "title": "Comment directive to enable linting",
+        "type": "string",
+        "minLength": 1,
+        "default": "textlint-enable"
+      },
+      "disablingComment": {
+        "title": "Comment directive to disable linting",
+        "type": "string",
+        "minLength": 1,
+        "default": "textlint-disable"
+      },
+      "severity": {
+        "title": "Severity of lint messages",
+        "type": "string",
+        "enum": ["error", "warning", "info"],
+        "default": "error"
+      }
+    }
+  }]
+}
