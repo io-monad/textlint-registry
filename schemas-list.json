@@ -4,6 +4,11 @@
     "file": "textlint-rule-alex.json",
     "version": "1.0.1"
   },
+  "textlint-rule-chapter-difficulty-stars": {
+    "name": "textlint-rule-chapter-difficulty-stars",
+    "file": "textlint-rule-chapter-difficulty-stars.json",
+    "version": "0.1.2"
+  },
   "textlint-rule-common-misspellings": {
     "name": "textlint-rule-common-misspellings",
     "file": "textlint-rule-common-misspellings.json",
