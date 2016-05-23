@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "textlint-rule-preset-japanese v1.2.0 configuration",
+  "title": "textlint-rule-preset-japanese v1.3.0 configuration",
   "oneOf": [{
     "title": "Enable this rule with default options",
     "type": "boolean"
@@ -37,6 +37,10 @@
       },
       "no-mix-dearu-desumasu": {
         "$ref": "textlint-rule-no-mix-dearu-desumasu.json#",
+        "default": true
+      },
+      "no-nfd": {
+        "$ref": "textlint-rule-no-nfd.json#",
         "default": true
       }
     }
