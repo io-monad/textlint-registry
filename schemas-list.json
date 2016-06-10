@@ -49,6 +49,11 @@
     "file": "textlint-rule-incremental-headers.json",
     "version": "0.2.0"
   },
+  "textlint-rule-ja-no-weak-phrase": {
+    "name": "textlint-rule-ja-no-weak-phrase",
+    "file": "textlint-rule-ja-no-weak-phrase.json",
+    "version": "1.0.2"
+  },
   "textlint-rule-ja-yahoo-kousei": {
     "name": "textlint-rule-ja-yahoo-kousei",
     "file": "textlint-rule-ja-yahoo-kousei.json",
